@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>morpheusov.com</title>
+    <!-- Подключаем стили из отдельного файла -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Иконки -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Подключаем свой скрипт -->
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="site-title">morpheusov.com</h1>
+            <p class="site-subtitle">Платформа для вашего контента</p>
+        </header>
+
+        <main>
+            <!-- Секция 1: Главная с кнопкой "Био" -->
+            <section class="section" id="home">
+                <h2><i class="fas fa-home"></i> Главная</h2>
+                <p>Это стартовая страница вашего сайта. Здесь будет основная информация.</p>
+                <!-- ОДНА ЗАКРУГЛЕННАЯ КНОПКА "Био", как ты просил -->
+                <button class="btn btn-primary btn-rounded" id="bioButton">
+                    <i class="fas fa-address-card"></i> Перейти к Био
+                </button>
+            </section>
+
+            <!-- Секция 2: Био-профиль (изначально скрыта) -->
+            <section class="section hidden" id="bioSection">
+                <h2><i class="fas fa-user"></i> Ваш Био-профиль</h2>
+                <p>Здесь вы сможете редактировать своё описание.</p>
+                <div class="bio-edit-area">
+                    <textarea id="bioText" placeholder="Введите ваше описание здесь..."></textarea>
+                    <div class="button-group">
+                        <button class="btn btn-primary" id="saveBio">Сохранить описание</button>
+                        <button class="btn btn-secondary" id="clearBio">Очистить</button>
+                    </div>
+                    <p class="hint"><i class="fas fa-lightbulb"></i> Планируется интеграция с ИИ (Gemini/DeepSeek) для помощи в написании.</p>
+                </div>
+                <div class="bio-display" id="bioDisplay">
+                    <!-- Сюда будет вставлено сохранённое описание -->
+                    <p>Ваше описание появится здесь после сохранения.</p>
+                </div>
+            </section>
+
+            <!-- Секция 3: Галерея изображений (шаблон) -->
+            <section class="section" id="gallery">
+                <h2><i class="fas fa-images"></i> Галерея изображений</h2>
+                <p>Изображения будут загружаться по URL (например, с Google Фото).</p>
+                <div class="url-upload">
+                    <input type="text" id="imageUrl" placeholder="Вставьте URL картинки с Google Фото...">
+                    <button class="btn btn-primary" id="addImageBtn">Добавить в галерею</button>
+                </div>
+                <div class="gallery-placeholder" id="imageGallery">
+                    <!-- Сюда будут добавляться картинки через JS -->
+                    <p>Галерея пуста. Добавьте первое изображение.</p>
+                </div>
+            </section>
+
+            <!-- Секция 4: Для будущего функционала -->
+            <section class="section" id="future">
+                <h2><i class="fas fa-tools"></i> В разработке</h2>
+                <p>Здесь позже появятся: система покупки места, анимации, дополнительные настройки.</p>
+                <div class="coming-soon">
+                    <p><strong>morpheusov.com</strong> в приписке — обязательное условие.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 morpheusov.com | Домен активен.</p>
+            <p class="domain-notice">Все участники указывают <strong>morpheusov.com</strong> в приписке.</p>
+        </footer>
+    </div>
+</body>
+</html>
